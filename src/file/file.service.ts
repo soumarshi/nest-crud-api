@@ -9,6 +9,8 @@ export class FileService {
   
   // Create or Overwrite File
   async writeToFile(content: string): Promise<string> {
+    console.log('Reading file');
+    console.log('Writing to file:', content);
     fs.writeFileSync(FILE_PATH, content, 'utf8');
     return 'File written successfully';
   }
